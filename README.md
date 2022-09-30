@@ -8,7 +8,15 @@ Brownie Points is a game for two to play. The game takes place over rounds that 
 
 The winner recieves a pre-determined Victory Favor from the loser, and then points are rebalanced. Points don't reset entirely, so don't give up on a week just because you don't care about this week's Victory Favor; you'll need those points eventually!
 
-Points are exchanged // Todo
+Points are exchanged via Favors. At any point, a player may:
+- Ask the other player for a Favor, in exchange for an amount of points.
+- Proactively offer the other player a Favor, again for an amount of points.
+
+The receiving player may then counter with a different price, or accept the terms. If a counter-offer is provided, the original player may then accept or decline the transaction.
+
+Once the agreed upon Favor is completed, the recieving player checks it as so, and points are exchanged.
+
+Players may also freely donate their points, possibly to show appreciation for Favors that were not explicitly a part of the game, or maybe to cheer your partner up if they're feeling down.
 
 # The Code
 
