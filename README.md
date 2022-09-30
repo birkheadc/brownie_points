@@ -1,4 +1,4 @@
-## Brownie Points
+# Brownie Points
 
 A game for partners where you fight over brownie points by doing favors for each other.
 
@@ -26,6 +26,24 @@ The game client is just a standard web page; the 'game' all occurs outside in re
 
 Ruby Version: 3.1.2p20
 Rails Version: 7.0.4
+
+# Setup
+
+## Database
+
+This application uses PostgreSQL. In development, 
+
+## Secrets
+
+In **Development** store secrets in `/config/secrets.rb`
+The following environment variables are required for the application to build and run.
+
+- `ENV["RAILS_BROWNIE_POINTS_DEVELOPMENT_DATABASE_PASSWORD"] = 'password'`
+- `ENV["RAILS_BROWNIE_POINTS_TEST_DATABASE_PASSWORD"] = 'password'`
+
+In **Production**, this secrets file is ***not used***. Instead, I suggest including these environment variables as arguments in the `Dockerfile`, and passing them from the `docker-compose.yml` used to deploy the app. The following environment variables are required in Production:
+
+- `RAILS_BROWNIE_POINTS_PRODUCTION_DATABASE_PASSWORD`
 
 <!-- Things you may want to cover:
 
