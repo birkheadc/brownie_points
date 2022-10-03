@@ -82,7 +82,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: brownie_points_test
+  database: brownie_points
   pool: 5
   username: brownie_points
   password: <%= ENV["RAILS_BROWNIE_POINTS_PRODUCTION_DATABASE_PASSWORD"] %>
