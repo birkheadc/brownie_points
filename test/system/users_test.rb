@@ -14,8 +14,8 @@ class UsersTest < ApplicationSystemTestCase
     visit users_url
     click_on "New user"
 
-    fill_in "Group", with: @user.group_id
-    fill_in "Nickname", with: @user.nickname
+    fill_in "Nick name", with: @user.nick_name
+    fill_in "Partner", with: @user.partner
     fill_in "Password", with: @user.password
     fill_in "Points", with: @user.points
     fill_in "User name", with: @user.user_name
@@ -29,8 +29,8 @@ class UsersTest < ApplicationSystemTestCase
     visit user_url(@user)
     click_on "Edit this user", match: :first
 
-    fill_in "Group", with: @user.group_id
-    fill_in "Nickname", with: @user.nickname
+    fill_in "Nick name", with: @user.nick_name
+    fill_in "Partner", with: @user.partner
     fill_in "Password", with: @user.password
     fill_in "Points", with: @user.points
     fill_in "User name", with: @user.user_name

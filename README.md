@@ -59,7 +59,7 @@ In **Production**, this secrets file is ***not used***. Instead, I suggest inclu
 
 In this application, models are identified by a randomly generated UUID rather than an auto-incrementing integer. This is mostly handled by Rails automatically, but one small change must be made manually to each Migrate file before calling `rake db:migrate`.
 
-`enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')` must be added, and `create_table :{table} do |t|` must be changed to `create_table :{table}, id: :uuid do |t|`
+`enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')` must be added, and `create_table :{table} do |t|` must be changed to `create_table :{table}, id: :uuid, default: 'gen_random_uuid()' do |t|`
 
 For example, the following generated Migrate is changed from:
 
@@ -75,7 +75,7 @@ To:
 class CreateUsers < ActiveRecord::Migration[7.0]
   def change
     enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')
-    create_table :users, id: :uuid do |t|
+    create_table :users, id: :uuid, default: 'gen_random_uuid()' do |t|
     ...
 ```
 

@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_30_040201) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_03_132327) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
-  create_table "groups", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "user_name"
+    t.text "password"
+    t.string "nick_name"
+    t.integer "points"
+    t.uuid "partner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
