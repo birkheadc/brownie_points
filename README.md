@@ -61,6 +61,24 @@ In this application, models are identified by a randomly generated UUID rather t
 
 `enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')` must be added, and `create_table :{table} do |t|` must be changed to `create_table :{table}, id: :uuid do |t|`
 
+For example, the following generated Migrate is changed from:
+
+```
+class CreateUsers < ActiveRecord::Migration[7.0]
+  def change
+    create_table :users do |t|
+    ...
+```
+To:
+
+```
+class CreateUsers < ActiveRecord::Migration[7.0]
+  def change
+    enable_extension 'pgcrypto' unless extension_enabled?('pgcrypto')
+    create_table :users, id: :uuid do |t|
+    ...
+```
+
 <!-- Things you may want to cover:
 
 * Ruby version
