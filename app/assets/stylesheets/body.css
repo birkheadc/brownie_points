@@ -1,0 +1,18 @@
+body {
+  background-color: var(--clr-bg-primary);
+  color: var(--clr-text-primary);
+  font-family: var(--font-main);
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: var(--font-h);
+}
+
+body h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+body p {
+  font-size: 1.6rem;
+}

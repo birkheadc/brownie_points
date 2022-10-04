@@ -1,0 +1,17 @@
+header {
+  background-color: var(--clr-bg-secondary);
+  color: var(--clr-text-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.icon-link>img {
+  border-radius: 50%;
+  background-color: var(--clr-accent-secondary);
+}
+
+.icon-link>img:hover, .icon-link>img:active {
+  background-color: var(--clr-accent-primary);
+}

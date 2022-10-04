@@ -3,12 +3,14 @@
   <head>
     <title>Brownie Points</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= render 'layouts/fonts' %>
+    <script src="https://kit.fontawesome.com/f3565d31ff.js" crossorigin="anonymous"></script>
   </head>
-  <%= render 'header/header' %>
+  <%= render 'header/header', logged_in?: @logged_in %>
   <body>
     <%= yield %>
   </body>

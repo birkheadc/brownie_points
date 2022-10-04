@@ -1,0 +1,19 @@
+.accent-primary {
+  color: var(--clr-accent-primary);
+}
+
+.accent-secondary {
+  color: var(--clr-accent-secondary);
+}
+
+.font-fancy {
+  font-family: var(--font-f);
+}
+
+.drop-shadow {
+  text-shadow: 0.05em 0.05em black;
+}
+
+.center {
+  text-align: center;
+}

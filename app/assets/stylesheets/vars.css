@@ -1,0 +1,16 @@
+:root {
+  --clr-text-primary: #323031;
+  --clr-text-secondary: #F9F5E3;
+
+  --clr-bg-primary: #F9F5E3;
+  --clr-bg-secondary: #323031;
+
+  --clr-accent-primary: #F7AEF8;
+  --clr-accent-secondary: #9C6615;
+  --clr-accent-hover: #48A9A6;
+
+  --font-main: 'Abel', sans-serif;
+  --font-a: 'Peralta', cursive;
+  --font-h: 'Fredoka One', cursive;
+  --font-f: 'Peralta', cursive;
+}
