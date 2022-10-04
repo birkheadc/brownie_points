@@ -15,7 +15,7 @@ class UsersTest < ApplicationSystemTestCase
     click_on "New user"
 
     fill_in "Nick name", with: @user.nick_name
-    fill_in "Partner", with: @user.partner
+    fill_in "Partner", with: @user.partner_id
     fill_in "Password", with: @user.password
     fill_in "Points", with: @user.points
     fill_in "User name", with: @user.user_name
@@ -30,7 +30,7 @@ class UsersTest < ApplicationSystemTestCase
     click_on "Edit this user", match: :first
 
     fill_in "Nick name", with: @user.nick_name
-    fill_in "Partner", with: @user.partner
+    fill_in "Partner", with: @user.partner_id
     fill_in "Password", with: @user.password
     fill_in "Points", with: @user.points
     fill_in "User name", with: @user.user_name

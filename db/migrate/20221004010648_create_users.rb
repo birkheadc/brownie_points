@@ -4,9 +4,9 @@ class CreateUsers < ActiveRecord::Migration[7.0]
     create_table :users, id: :uuid, default: 'gen_random_uuid()' do |t|
       t.string :user_name
       t.text :password
-      t.string :nick_name
+      t.uuid :partner_id
       t.integer :points
-      t.uuid :partner
+      t.string :nick_name
 
       t.timestamps
     end
