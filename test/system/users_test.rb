@@ -16,7 +16,8 @@ class UsersTest < ApplicationSystemTestCase
 
     fill_in "Nick name", with: @user.nick_name
     fill_in "Partner", with: @user.partner_id
-    fill_in "Password", with: @user.password
+    fill_in "Password", with: "secret"
+    fill_in "Password confirmation", with: "secret"
     fill_in "Points", with: @user.points
     fill_in "User name", with: @user.user_name
     click_on "Create User"
@@ -31,7 +32,8 @@ class UsersTest < ApplicationSystemTestCase
 
     fill_in "Nick name", with: @user.nick_name
     fill_in "Partner", with: @user.partner_id
-    fill_in "Password", with: @user.password
+    fill_in "Password", with: "secret"
+    fill_in "Password confirmation", with: "secret"
     fill_in "Points", with: @user.points
     fill_in "User name", with: @user.user_name
     click_on "Update User"

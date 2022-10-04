@@ -2,14 +2,14 @@
 
 one:
   user_name: MyString
-  password: MyText
-  partner_id: 
-  points: 1
+  password_digest: <%= BCrypt::Password.create("secret") %>
   nick_name: MyString
+  points: 1
+  partner_id: 
 
 two:
   user_name: MyString
-  password: MyText
-  partner_id: 
-  points: 1
+  password_digest: <%= BCrypt::Password.create("secret") %>
   nick_name: MyString
+  points: 1
+  partner_id: 

@@ -1,8 +1,6 @@
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
       <ul>
         <% user.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -12,23 +10,23 @@
   <% end %>
 
   <div>
-    <%= form.label :user_name, style: "display: block" %>
+    <%= form.label :user_name, "User Name (You will use this to log in)" %>
     <%= form.text_field :user_name %>
   </div>
 
   <div>
-    <%= form.label :password, style: "display: block" %>
-    <%= form.text_area :password %>
-  </div>
-
-  <div>
-    <%= form.label :password, style: "display: block" %>
-    <%= form.text_area :password %>
-  </div>
-
-  <div>
-    <%= form.label :nick_name, style: "display: block" %>
+    <%= form.label :nick_name, "Nick Name (How your name will appear in-app)" %>
     <%= form.text_field :nick_name %>
+  </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.label :password_confirmation, "Confirm Password" %>
+    <%= form.password_field :password_confirmation %>
   </div>
 
   <div>
