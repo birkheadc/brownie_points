@@ -10,8 +10,11 @@
     <%= render 'layouts/fonts' %>
     <script src="https://kit.fontawesome.com/f3565d31ff.js" crossorigin="anonymous"></script>
   </head>
-  <%= render 'header/header', logged_in?: @logged_in %>
   <body>
-    <%= yield %>
+    <%= render 'header/header', logged_in?: @logged_in %>
+    <div class='screen-wrapper'>
+      <%= yield %>
+    </div>
+    <%= render 'footer/footer' %>
   </body>
 </html>

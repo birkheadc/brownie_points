@@ -1,12 +1,14 @@
 nav>ul {
   display: flex;
-  gap:2em;
+  gap:1em;
 }
 
 .nav-link {
   font-family: var(--font-a);
+  font-weight: bold;
   color: var(--clr-accent-primary);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  text-decoration: underline;
 }
 
 .nav-link:hover, .nav-link:active {

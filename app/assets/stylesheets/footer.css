@@ -1,0 +1,14 @@
+footer {
+  background-color: var(--clr-bg-secondary);
+  color: var(--clr-text-secondary);
+  padding: 0.5rem 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
